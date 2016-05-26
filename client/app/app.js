@@ -3,6 +3,7 @@
 // thanks the the styles loader it gets added as a
 // <style> tag in the head by default but can be changed
 import 'normalize.css';
+import './app.styl';
 import {appDirective} from './app.directive';
 // the angular libs are just common js
 // and therefore we can assume they were
@@ -19,6 +20,7 @@ import ngAnimate from 'angular-animate';
 // without using default keyword
 // we must import it with the brackets
 import {home} from './components/home/home';
+import {blog} from './components/blog/blog';
 
 angular.module('app', [
   uiRouter,
@@ -28,6 +30,7 @@ angular.module('app', [
   // all angular modules have a name
   // property who's value is the name you set the
   // module to be
-  home.name
+  home.name,
+  blog.name
 ])
 .directive('app', appDirective);
